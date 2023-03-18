@@ -4,7 +4,7 @@ import { data } from "../Data";
 function ProjectCard() {
   const dark = useSelector((state) => state.theme.theme);
   return (
-    <div className="grid grid-cols-4 gap-10 justify-between items-center ">
+    <div className=" xl:pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-between items-center">
       {data.map((project) => {
         return (
           <div

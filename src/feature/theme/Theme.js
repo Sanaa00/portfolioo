@@ -7,10 +7,9 @@ function Theme() {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme.theme);
   return (
-    <div className="w-10 flex justify-center items-center">
+    <div className="w-10 justify-center items-center">
       {theme === false ? (
         <HiSun
-          fill="#cc2b5e"
           className="w-8 h-8 "
           onClick={() => {
             dispatch(changeToggle());
@@ -18,7 +17,6 @@ function Theme() {
         />
       ) : (
         <TbMoonFilled
-          fill="#753a88"
           className="w-7 h-7"
           onClick={() => {
             dispatch(changeToggle());

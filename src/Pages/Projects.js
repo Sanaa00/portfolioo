@@ -7,7 +7,7 @@ function Projects() {
     <div
       className={` ${
         dark ? "bg-grayy" : "bg-dark"
-      } +  w-screen my-20  flex  justify-center items-center`}
+      } + w-screen pt-10 pb-20 flex justify-center items-center min-h-screen`}
     >
       <ProjectCard />
     </div>

@@ -8,12 +8,12 @@ function Contact() {
     <div
       className={` ${
         dark ? "bg-grayy" : "bg-dark"
-      } + flex flex-col justify-center items-center w-screen my-20 h-full font-Zen`}
+      } + flex flex-col pt-20 items-center w-screen sm:my-20 font-Zen h-screen`}
     >
       <ContactCard />
       <a
         href={cv}
-        className="mx-10 mt-10 text-sm bg-sawz p-2 bg-gradient-to-tr from-pinkk to-purplee w-96 text-center text-gray-100 rounded"
+        className="mx-10 mt-10  text-sm bg-sawz p-2 bg-gradient-to-tr from-pinkk to-purplee w-full sm:w-96 text-center text-gray-100 rounded"
         download
       >
         Download CV
