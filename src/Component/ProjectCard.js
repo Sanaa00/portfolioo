@@ -4,7 +4,7 @@ import { data } from "../Data";
 function ProjectCard() {
   const dark = useSelector((state) => state.theme.theme);
   return (
-    <div className=" xl:pt-10 grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-between items-center">
+    <div className=" xl:pt-10 grid grid-cols-1 grid-rows-2 lg:grid-cols-2 xl:grid-cols-3 gap-10 justify-between items-center">
       {data.map((project) => {
         return (
           <a
@@ -14,7 +14,7 @@ function ProjectCard() {
               dark
                 ? "bg-grayy text-gray-700 "
                 : "bg-dark  shadow-darkgray hover:shadow-darkgray text-gray-300"
-            } + shadow-md rounded hover:shadow-xl  hover:scale-105 hover:duration-500 duration-500`}
+            } + shadow-md rounded hover:shadow-xl  hover:scale-105 hover:duration-500 duration-500 max-h-[540px]`}
           >
             <div className="flex justify-center items-center mt-4">
               <img
