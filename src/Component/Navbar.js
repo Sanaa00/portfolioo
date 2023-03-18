@@ -2,25 +2,30 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 import Theme from "../feature/theme/Theme";
-import close from "../images/close.png";
-import menu from "../images/menuu.png";
+import { IoMenu } from "react-icons/io5";
+import { IoCloseCircle } from "react-icons/io5";
 import Container from "./Container";
+
 function Navbar() {
   const dark = useSelector((state) => state.theme.theme);
   const [open, setOpen] = useState(false);
   return (
     <div
-      className={`bg-gradient-to-r from-pinkk to-purplee flex  w-full shadow`}
+      className={`${
+        dark ? "bg-grayy" : "bg-dark shadow-darkgray"
+      } + flex w-full h-16 shadow`}
     >
       <Container>
         <div
-          className={`flex justify-between items-center w-full h-16 text-lg font-bold font-Zen text-grayy`}
+          className={`flex justify-between items-center w-full h-16 text-lg font-bold font-Zen text-grayy `}
         >
           <button onClick={() => setOpen(!open)} className="sm:hidden">
-            <img src={menu} alt="menu" className="w-8 h-8" />
+            <IoMenu fill="#f55951" className="w-8 h-8 text-orange" />
           </button>{" "}
           <div
-            className={`rounded-sm sm:hidden flex flex-col fixed bg-grayy w-3/5 top-0 z-40 left-0 shadow-lg transform duration-500 ease-in-out ${
+            className={`${
+              dark ? "bg-grayy" : "bg-dark shadow-darkgray"
+            } + rounded-sm sm:hidden flex flex-col fixed w-3/5 top-0 z-40 left-0 shadow-lg transform duration-500 ease-in-out ${
               open ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -29,7 +34,7 @@ function Navbar() {
                 onClick={() => setOpen(!open)}
                 className="text-black w-full px-6"
               >
-                <img src={close} alt="close" className="w-8 h-8" />
+                <IoCloseCircle className="text-orange w-8 h-8" />
               </button>
             </div>
 
@@ -37,37 +42,40 @@ function Navbar() {
               <Link
                 to="/"
                 onClick={() => setOpen(!open)}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-pinkk to-purplee text-center py-2"
+                className="text-orange text-center py-3"
               >
                 Home
               </Link>
               <Link
                 to="/projects"
                 onClick={() => setOpen(!open)}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-pinkk to-purplee text-center py-2"
+                className="text-orange text-center py-3"
               >
                 Projects
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setOpen(!open)}
-                className="text-transparent bg-clip-text bg-gradient-to-r from-pinkk to-purplee text-center py-2"
+                className="text-orange text-center py-3"
               >
                 Contact
               </Link>{" "}
-              <Link to="/" onClick={() => setOpen(!open)}>
-                {" "}
-                <Theme />
-              </Link>
+              <div
+                className="flex justify-center items-center"
+                onClick={() => setOpen(!open)}
+              >
+                <Theme className="py-3" />
+              </div>
             </div>
           </div>
-          <Link to="/" className="">
+          <Link to="/" className="text-orange">
             Sana
           </Link>
           <ul className="hidden sm:flex justify-between items-center sm:w-2/5 md:w-3/6 lg:w-2/5">
             <NavLink
               className={({ isActive }) =>
-                (isActive ? "border-b-2 border-grayy" : "") + ""
+                (isActive ? "border-b-2 border-orange " : "") +
+                "hover:scale-110 hover:duration-500 duration-500 text-orange"
               }
               to="/"
             >
@@ -75,7 +83,8 @@ function Navbar() {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                (isActive ? "border-b-2  border-grayy " : "") + ""
+                (isActive ? "border-b-2  border-orange " : "") +
+                "hover:scale-110 hover:duration-500 duration-500 text-orange"
               }
               to="/projects"
             >
@@ -83,7 +92,8 @@ function Navbar() {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                (isActive ? "border-b-2  border-grayy " : "") + ""
+                (isActive ? "border-b-2  border-orange " : "") +
+                "hover:scale-110 hover:duration-500 duration-500 text-orange"
               }
               to="/contact"
             >

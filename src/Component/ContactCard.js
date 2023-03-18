@@ -12,11 +12,11 @@ function ContactCard() {
               dark
                 ? "bg-grayy"
                 : "bg-dark shadow-darkgray hover:shadow-darkgray"
-            } + flex items-center mb-5 p-6 shadow hover:shadow-xl w-full`}
+            } + flex items-center mb-5 p-6 shadow hover:shadow-xl w-full hover:scale-105 hover:duration-500 duration-500`}
             key={con.id}
             href={con.url}
           >
-            <img alt="icons" src={con.icon} className="w-8 h-8" />
+            {con.icon}
             <p className="pl-5">{con.name}</p>
           </a>
         );

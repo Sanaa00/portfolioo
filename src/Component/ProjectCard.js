@@ -4,16 +4,17 @@ import { data } from "../Data";
 function ProjectCard() {
   const dark = useSelector((state) => state.theme.theme);
   return (
-    <div className=" xl:pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-between items-center">
+    <div className=" xl:pt-10 grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-between items-center">
       {data.map((project) => {
         return (
-          <div
+          <a
+            href={project.link}
             key={project.id}
             className={` ${
               dark
-                ? "bg-grayy "
-                : "bg-dark  shadow-darkgray hover:shadow-darkgray"
-            } + shadow-md rounded hover:shadow-xl hover`}
+                ? "bg-grayy text-gray-700 "
+                : "bg-dark  shadow-darkgray hover:shadow-darkgray text-gray-300"
+            } + shadow-md rounded hover:shadow-xl  hover:scale-105 hover:duration-500 duration-500`}
           >
             <div className="flex justify-center items-center mt-4">
               <img
@@ -24,12 +25,12 @@ function ProjectCard() {
             </div>
 
             <div className="p-4">
-              <div className="text-lg text-transparent bg-clip-text bg-gradient-to-r from-pinkk to-purplee font-bold">
+              <div className="text-lg text-orange font-bold">
                 {project.title}
               </div>
               <p className="text-sm">{project.description}</p>
             </div>
-          </div>
+          </a>
         );
       })}
     </div>

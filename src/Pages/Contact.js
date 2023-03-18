@@ -13,7 +13,7 @@ function Contact() {
       <ContactCard />
       <a
         href={cv}
-        className="mx-10 mt-10  text-sm bg-sawz p-2 bg-gradient-to-tr from-pinkk to-purplee w-full sm:w-96 text-center text-gray-100 rounded"
+        className="mx-10 mt-10  text-sm bg-sawz p-2 bg-orange  w-full sm:w-96 text-center text-gray-200 rounded hover:opacity-70 duration-500 hover:duration-500"
         download
       >
         Download CV
