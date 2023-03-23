@@ -12,7 +12,7 @@ function ContactCard() {
               dark
                 ? "bg-grayy"
                 : "bg-dark shadow-darkgray hover:shadow-darkgray"
-            } + flex items-center mb-5 p-6 shadow hover:shadow-xl w-full hover:scale-105 hover:duration-500 duration-500`}
+            } + flex items-center mb-5 p-6 shadow hover:shadow-lg w-full hover:scale-105 hover:duration-500 duration-500`}
             key={con.id}
             href={con.url}
           >

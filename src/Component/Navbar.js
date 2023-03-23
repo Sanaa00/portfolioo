@@ -12,12 +12,12 @@ function Navbar() {
   return (
     <div
       className={`${
-        dark ? "bg-grayy" : "bg-dark shadow-darkgray"
-      } + flex w-full h-16 shadow`}
+        dark ? "bg-grayy" : "bg-dark shadow-darkgray border-darkgray"
+      } + flex w-full h-16 border-b-2`}
     >
       <Container>
         <div
-          className={`flex justify-between items-center w-full h-16 text-lg font-bold font-Zen text-grayy `}
+          className={`flex justify-between items-center w-full h-full text-lg font-bold font-Poppins text-grayy `}
         >
           <button onClick={() => setOpen(!open)} className="sm:hidden">
             <IoMenu fill="#f55951" className="w-8 h-8 text-orange" />
