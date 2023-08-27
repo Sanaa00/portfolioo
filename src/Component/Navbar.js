@@ -1,111 +1,136 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 import Theme from "../feature/theme/Theme";
-import { IoMenu } from "react-icons/io5";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseCircle } from "react-icons/io5";
-import Container from "./Container";
+import cv from "../images/sana-rzgar-cv.pdf";
+import { AiOutlineDownload } from "react-icons/ai";
 
 function Navbar() {
-  const dark = useSelector((state) => state.theme.theme);
   const [open, setOpen] = useState(false);
+
   return (
     <div
-      className={`${
-        dark ? "bg-grayy" : "bg-dark shadow-darkgray border-darkgray"
-      } + flex w-full h-16 border-b-2`}
+      className={`bg-grayy text-gray-700 dark:bg-dark dark:text-grayy `}
+   
     >
-      <Container>
+          <div className="flex flex-col  ">
+         
         <div
-          className={`flex justify-between items-center w-full h-full text-lg font-bold font-Poppins text-grayy `}
+          className={" dark:bg-dark bg-opacity-70 bg-grayy px-6 sm:px-12 md:px-20 lg:px-26 xl:px-36   fixed w-full text-xl 2xl:text-2xl flex flex-row justify-between items-center  h-20 font-semibold " }
         >
-          <button onClick={() => setOpen(!open)} className="sm:hidden">
-            <IoMenu fill="#f55951" className="w-8 h-8 text-orange" />
-          </button>{" "}
-          <div
-            className={`${
-              dark ? "bg-grayy" : "bg-dark shadow-darkgray"
-            } + rounded-sm sm:hidden flex flex-col fixed w-3/5 top-0 z-40 left-0 shadow-lg transform duration-500 ease-in-out ${
-              open ? "translate-x-0" : "-translate-x-full"
+      
+          <div className="hidden sm:flex  items-center ">
+            <div
+              to="/"
+                 className={({ isActive }) =>
+                (isActive ? "text-orange dark:text-orange " : "") +
+                " hover:duration-500 hover:text-gray-600 dark:hover:text-gray-300 duration-500  mr-4"
+              }
+          
+            >
+              Sana
+            </div>
+            <NavLink
+              to="/"  
+            className={({ isActive }) =>
+                (isActive ? "text-orange dark:text-orange" : "") +
+                " hover:duration-500 hover:text-gray-600 dark:hover:text-gray-300 duration-500 px-2"
+              }
+            
+            >
+              About
+            </NavLink>
+            <NavLink
+                to="/skills"
+                 className={({ isActive }) =>
+                (isActive ? "text-orange dark:text-orange" : "") +
+                " hover:duration-500 hover:text-gray-600 dark:hover:text-gray-300 duration-500 px-2"
+              }
+            >
+              Skill
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                (isActive ? "text-orange dark:text-orange" : "") +
+                " hover:duration-500 hover:text-gray-600 dark:hover:text-gray-300 duration-500 px-2"
+              }
+            
+            >
+              Project
+            </NavLink>
+            </div>
+            <div className="hidden sm:flex items-center ">
+            <Theme className="mx-2" />
+            <a href={cv} download className=" lg:ml-3 flex items-center text-sm 2xl:text-lg hover:bg-opacity-80 duration-500 hover:duration-500 font-semibold bg-orange text-grayy rounded px-6 py-1">
+              Resume
+              <AiOutlineDownload className="ml-1 w-6 h-6" />
+            </a>
+             
+          </div>
+          <div className="flex sm:hidden">
+            <NavLink to="/" className="sm:hidden ml-2 text-2xl font-semibold text-orange">Sana</NavLink>
+            </div>
+          
+          <div className="sm:hidden">
+            <div className={`sm:hidden flex justify-between hover:bg-opacity-80 duration-500 hover:duration-500 items-center w-full h-full text-lg font-bold font-Poppins text-grayy `} >
+              <Theme  />
+              <button onClick={() => setOpen(!open)} className="sm:hidden ">
+               <GiHamburgerMenu  className="w-8 object-cover h-9 text-orange" />
+              </button>{" "}
+            <div
+                className={`
+            bg-grayy dark:bg-dark dark:shadow-darkgray rounded-sm sm:hidden flex flex-col fixed w-3/5 top-0 z-40 right-0 shadow-lg transform duration-500 ease-in-out ${
+              open ? "-translate-x-0" : "translate-x-full"
             }`}
-          >
-            <div className="flex h-16">
+             >
+            <div className="flex justify-end  h-16">
               <button
                 onClick={() => setOpen(!open)}
-                className="text-black w-full px-6"
+                className="text-gray-700 flex justify-end mb-2 right-0 px-6"
               >
-                <IoCloseCircle className="text-orange w-8 h-8" />
+                <IoCloseCircle className="text-orange justify-end w-8 object-cover h-8 self-end" />
               </button>
             </div>
 
-            <div className="w-full h-screen flex flex-col">
+            <div className="w-full items-center h-screen flex flex-col text-orange">
               <Link
-                to="/"
+                    to="/"
                 onClick={() => setOpen(!open)}
-                className="text-orange text-center py-3"
+                className="dark:text-grayy text-center py-3"
               >
                 Home
               </Link>
               <Link
-                to="/projects"
+                    to="/skills"
+             onClick={() => setOpen(!open)}
+                className="dark:text-grayy text-center py-3"
+              >
+                Skills
+              </Link>
+               <Link
+                    to="/projects"
+
                 onClick={() => setOpen(!open)}
-                className="text-orange text-center py-3"
+                className="dark:text-grayy text-center py-3"
               >
                 Projects
-              </Link>
-              <Link
-                to="/contact"
-                onClick={() => setOpen(!open)}
-                className="text-orange text-center py-3"
-              >
-                Contact
-              </Link>{" "}
-              <div
-                className="flex justify-center items-center"
-                onClick={() => setOpen(!open)}
-              >
-                <Theme className="py-3" />
-              </div>
+              </Link>{" "} 
+               <div className="flex sm:hidden items-center ">
+        
+            <a href={cv} download className="mt-5 flex items-center text-sm font-semibold bg-orange text-grayy rounded px-6 py-1">Resume <AiOutlineDownload className="ml-1 w-6 h-6" /></a>
+             
+          </div>
             </div>
-          </div>
-          <Link to="/" className="text-orange">
-            Sana
-          </Link>
-          <ul className="hidden sm:flex justify-between items-center sm:w-2/5 md:w-3/6 lg:w-2/5">
-            <NavLink
-              className={({ isActive }) =>
-                (isActive ? "border-b-2 border-orange " : "") +
-                "hover:scale-110 hover:duration-500 duration-500 text-orange"
-              }
-              to="/"
-            >
-              Home
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                (isActive ? "border-b-2  border-orange " : "") +
-                "hover:scale-110 hover:duration-500 duration-500 text-orange"
-              }
-              to="/projects"
-            >
-              Projects
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                (isActive ? "border-b-2  border-orange " : "") +
-                "hover:scale-110 hover:duration-500 duration-500 text-orange"
-              }
-              to="/contact"
-            >
-              Contact
-            </NavLink>
-          </ul>
-          <div className="hidden sm:flex">
-            <Theme />{" "}
-          </div>
+            </div>
+          </div> 
+          
+          </div>  
+        </div> 
+   
         </div>
-      </Container>
-    </div>
+        </div >
   );
 }
 

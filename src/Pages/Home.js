@@ -4,37 +4,27 @@ function Home() {
   const dark = useSelector((state) => state.theme.theme);
   return (
     <div
-      className={` ${
-        dark ? "bg-grayy" : "bg-dark"
-      } + h-screen flex flex-col w-full items-center font-Poppins`}
+      className={`bg-grayy dark:bg-dark flex flex-col w-full  justify-center items-center min-h-screen `}
     >
-      <div className="flex flex-col justify-center items-center text-gray-800 w-full mt-10">
-        <img
-          className="rounded-full  w-60 h-60 lg:h-80 lg:w-80 object-cover"
-          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
-          alt="person"
-        />
-        <div className=" flex flex-col justify-center items-center mt-5">
-          <p className="flex text-2xl text-gradient font-bold text-orange">
+      
+      <div className="py-10 pt-20 sm:mt-10 sm:my-0 flex flex-col justify-center items-center w-full">
+      
+          <p className="flex text-2xl sm:text-3xl 2xl:text-4xl text-gradient font-bold text-orange">
             Sana Rizgar
           </p>
-          <p className="text-center text-md sm:text-xl text-orange font-bold mt-1 sm:mt-2">
+          <p className="text-center text-xl sm:text-3xl 2xl:text-4xl text-orange font-bold mt-1 sm:mt-2">
             Software Engineer & Front-end Developer
-          </p>
+        </p>
+        <p className="text-xl sm:text-2xl 2xl:text-3xl font-semibold mt-8">About Me</p>
           <p
             className={` ${
-              dark ? "text-gray-700" : "text-gray-300"
-            } + text-md w-full lg:w-2/4 text-justify mt-2`}
+              dark ? "text-gray-600 " : "text-gray-300"
+            } + text-lg 2xl:text-xl w-full text-justify  lg:text-center mt-3 px-6`}
           >
-            I'm junior Software Engineer and front-End Developer, I am eager to
-            build on my skills and contribute to software development projects.
-            I have experience working with HTML, CSS, JavaScript, React and am
-            committed to learning new technologies and best practices. I am a
-            collaborative team player who communicates effectively and works
-            well under tight deadlines.
+           Hello there! I'm a dedicated front-end web developer who thrives on transforming creative ideas into captivating digital experiences. My journey into the tech world began with a solid educational foundation – I hold a degree in Software Engineering from Salahaddin University. Eager to put my knowledge into action, I ventured into the realm of education, working as an assistant lecturer at Charmo University. During this time, I not only deepened my understanding of technology but also honed my communication skills. Following my passion for web development, I took on the challenge of the WeCode Front-End Bootcamp and later the comprehensive Bit Fullstack Bootcamp. These experiences equipped me with a strong command of tools like React and a holistic understanding of full-stack development. With a blend of academic excellence and hands-on coding skills, I'm committed to crafting user-centric interfaces that seamlessly merge aesthetics with functionality.
           </p>
         </div>
-      </div>
+   
     </div>
   );
 }

@@ -2,24 +2,30 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Component/Navbar";
 import Home from "./Pages/Home";
-import Projects from "./Pages/Projects";
-import Contact from "./Pages/Contact";
 import Container from "./Component/Container";
-import { useSelector } from "react-redux";
+import Footer from "./Component/Footer";
+import SkillSection from "./Component/SkillSection";
+import ProjectSection from "./Component/ProjectSection";
+
 function App() {
-  const dark = useSelector((state) => state.theme.theme);
+ 
   return (
     <>
-      <div className={` ${dark ? "bg-grayy" : "bg-dark text-gray-50"} + `}>
+      <div className={` bg-grayy text-gray-700 font-oswald dark:bg-dark dark:text-grayy  `}>
         {" "}
         <Navbar />
-        <Container>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
+         <Container className="">
+          
+          <Routes className=" ">
+            <Route path="/" element={  <Home />}/>
+             <Route path="/Skills" element={  <SkillSection />} />
+         <Route path="/Projects" element={<ProjectSection />} />
           </Routes>
-        </Container>
+
+      
+        
+        </Container> 
+        <Footer/>
       </div>
     </>
   );
