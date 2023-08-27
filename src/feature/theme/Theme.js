@@ -6,8 +6,9 @@ import { changeToggle } from "./themeSlice";
 function Theme() {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme.theme);
+  console.log(theme)
   const onSelectMode = () => {
-    if (theme === true)
+    if (theme !== false)
       document.body.classList.add('dark')
     else
       document.body.classList.remove('dark')

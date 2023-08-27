@@ -21,7 +21,7 @@ function Navbar() {
         >
       
           <div className="hidden sm:flex  items-center ">
-            <div
+            <NavLink
               to="/"
                  className={({ isActive }) =>
                 (isActive ? "text-orange dark:text-orange " : "") +
@@ -30,8 +30,8 @@ function Navbar() {
           
             >
               Sana
-            </div>
-            <NavLink
+            </NavLink>
+            {/* <NavLink
               to="/"  
             className={({ isActive }) =>
                 (isActive ? "text-orange dark:text-orange" : "") +
@@ -39,8 +39,8 @@ function Navbar() {
               }
             
             >
-              About
-            </NavLink>
+              t
+            </NavLink> */}
             <NavLink
                 to="/skills"
                  className={({ isActive }) =>
@@ -48,7 +48,7 @@ function Navbar() {
                 " hover:duration-500 hover:text-gray-600 dark:hover:text-gray-300 duration-500 px-2"
               }
             >
-              Skill
+              Skills
             </NavLink>
             <NavLink
               to="/projects"
@@ -58,7 +58,7 @@ function Navbar() {
               }
             
             >
-              Project
+              Projects
             </NavLink>
             </div>
             <div className="hidden sm:flex items-center ">
@@ -119,7 +119,8 @@ function Navbar() {
               </Link>{" "} 
                <div className="flex sm:hidden items-center ">
         
-            <a href={cv} download className="mt-5 flex items-center text-sm font-semibold bg-orange text-grayy rounded px-6 py-1">Resume <AiOutlineDownload className="ml-1 w-6 h-6" /></a>
+                    <a href={cv} download className="mt-5 flex items-center text-sm font-semibold bg-orange text-grayy rounded px-6 py-1">
+                      Resume <AiOutlineDownload className="ml-1 w-6 h-6" /></a>
              
           </div>
             </div>
