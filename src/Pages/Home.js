@@ -1,7 +1,6 @@
 import React from "react";
-// import { useSelector } from "react-redux";
 function Home() {
-  // const dark = useSelector((state) => state.theme.theme);
+
   return (
     <div
       className={`bg-grayy dark:bg-dark flex flex-col w-full  justify-center items-center min-h-screen `}

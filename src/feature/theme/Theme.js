@@ -6,9 +6,9 @@ import { changeToggle } from "./themeSlice";
 function Theme() {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme.theme);
-  console.log(theme)
-  const onSelectMode = () => {
-    if (theme !== false)
+  // console.log(theme)
+  const onSelectMode = (theme) => {
+    if (theme === true)
       document.body.classList.add('dark')
     else
       document.body.classList.remove('dark')
@@ -19,16 +19,19 @@ function Theme() {
         <HiSun
           className="w-8 h-8 2xl:w-10 2xl:h-10 hover:text-opacity-80 hover:duration-500 duration-500 shadow-2xl text-orange"
           onClick={() => {
+            onSelectMode(theme)
             dispatch(changeToggle());
-            onSelectMode()
+          
           }}
         />
       ) : (
         <TbMoonFilled
           className="w-7 h-7 2xl:w-10 2xl:h-10 hover:text-opacity-80 hover:duration-500 duration-500 shadow-2xl text-orange"
-          onClick={() => {
+            onClick={() =>
+            {
+              onSelectMode(theme)
             dispatch(changeToggle());
-            onSelectMode()
+            
 
           }}
         />
