@@ -11,13 +11,13 @@ function Navbar() {
 
   return (
     <div
-      className={`bg-grayy text-gray-700 dark:bg-dark dark:text-grayy `}
+      className={`bg-grayy text-gray-700 dark:bg-dark dark:text-grayy z-50`}
    
     >
           <div className="flex flex-col  ">
          
         <div
-          className={" dark:bg-dark bg-opacity-70 bg-grayy px-6 sm:px-12 md:px-20 lg:px-26 xl:px-36   fixed w-full text-xl 2xl:text-2xl flex flex-row justify-between items-center  h-20 font-semibold " }
+          className={" dark:bg-dark bg-opacity-70 dark:bg-opacity-70 bg-grayy px-6 sm:px-12 md:px-20 lg:px-26 xl:px-36 z-50   fixed w-full text-xl 2xl:text-2xl flex flex-row justify-between items-center  h-20 font-semibold " }
         >
       
           <div className="hidden sm:flex  items-center ">
@@ -65,7 +65,7 @@ function Navbar() {
             <Theme className="mx-2" />
             <a href={cv} download className=" lg:ml-3 flex items-center text-sm 2xl:text-lg hover:bg-opacity-80 duration-500 hover:duration-500 font-semibold bg-orange text-grayy rounded px-6 py-1">
               Resume
-              <AiOutlineDownload className="ml-1 w-6 h-6" />
+              <AiOutlineDownload className="ml-1 w-6 h-6 animate__flash animate__animated animate__slower animate__repeat-3" />
             </a>
              
           </div>
