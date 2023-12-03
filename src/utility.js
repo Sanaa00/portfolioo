@@ -13,6 +13,7 @@ import PROJECT6 from "../src/images/PROJECT6.jpg"
 import PROJECT3 from "../src/images/PROJECT3.jpg" 
 import PROJECT4 from "../src/images/PROJECT4.jpg" 
 import PROJECT5 from "../src/images/PROJECT5.jpg" 
+import PROJECT7 from "../src/images/project7.jpg"
 
 // export const skills = [
 //      {
@@ -104,10 +105,10 @@ export const projects = [
      },
          {
           id: 5,
-          name: "Tickty",
-          demo: "https://sage-cendol-7f5b99.netlify.app/",
-              code: "https://github.com/Sanaa00/Hotel-Travel",
-              image:PROJECT5
+          name: "Foodied",
+          demo: "",
+              code: "https://github.com/Sanaa00/FOODIED.git",
+              image:PROJECT7
      },
            {
           id: 6,
