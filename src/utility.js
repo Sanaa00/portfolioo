@@ -11,49 +11,9 @@ import PROJECT1  from "../src/images/PROJECT1.jpg"
 import PROJECT2 from "../src/images/PROJECT2.jpg" 
 import PROJECT6 from "../src/images/PROJECT6.jpg" 
 import PROJECT3 from "../src/images/PROJECT3.jpg" 
-import PROJECT4 from "../src/images/PROJECT4.jpg" 
-import PROJECT5 from "../src/images/PROJECT5.jpg" 
+import PROJECT4 from "../src/images/PROJECT4.jpg"  
 import PROJECT7 from "../src/images/project7.jpg"
 
-// export const skills = [
-//      {
-//           id: 1,
-//           image: html
-//      },
-//       {
-//           id: 2,
-//           image: css
-//      },
-//        {
-//           id: 3,
-//           image: javascript
-//      }, {
-//           id: 4,
-//           image: github
-//      },
-     
-//         {
-//           id: 5,
-//           image: react
-//      },
-//          {
-//           id: 6,
-//           image: tailwind
-//      },
-//           {
-//           id: 7,
-//           image: redux
-//      },
-//            {
-//           id: 8,
-//           image: typescript
-//      },
-
-//              {
-//           id: 9,
-//           image: nextjs
-//      }, 
-// ]
  export const contacts = [
      {
           id: 1,
