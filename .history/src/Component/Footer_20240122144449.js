@@ -14,11 +14,11 @@ function Footer() {
                           <p className='text-lg flex items-center'><div><CiMail   className="w-6 h-6 mr-1" /></div>sanarizgar34@gmail.com</p>
                       </div>
                       <div className='flex w-full justify-between lg:flex-col sm:text-lg md:items-end'>
-                           <div className='flex w-full  justify-end items-center'>
+                           <div className='flex w-full  justify-between items-center'>
                                 {contacts.map((con) => {
                                      return <a key={con.id} href={con.link} className=' mr-5 sm:ml-0 flex mt-2 items-center'>
                                           <div>{con.icon}</div>
-                                          {/* <p className='ml-2 text-sm md:text-lg'>{ con.name}</p> */}
+                                          <p className='ml-2 text-sm md:text-lg'>{ con.name}</p>
                                      </a>
                                 })}
                            </div>

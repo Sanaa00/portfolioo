@@ -24,7 +24,7 @@ function ProjectSection() {
                                 </div></div>
                               
                                 <div className='w-full flex mt-1 mx-0'><span className=' text-purple5 text-sm py-1 mr-1'>Stack: </span>{project.tools.map((item) => {
-                                     return (<div key={item.id} className='flex text-purple5 text-sm mr-2 py-1 rounded-sm '>  { item.name}</div>)
+                                     return (<div key={item.id} className='flex text-purple5 text-sm mr-1 py-1 rounded-sm border-r-2'>  { item.name}</div>)
                                 }) }</div>
                            </div>
                       </div>

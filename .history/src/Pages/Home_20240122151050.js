@@ -1,12 +1,12 @@
 import React from "react";
 import 'animate.css/animate.min.css'; 
-// import design from "../images/B.svg"
+import design from "../images/B.svg"
 function Home() {
 
   return (
     <section
        id="home"
-      className={` dark:text-neutral-100 text-neutral-600 dark:bg-dark flex flex-col w-full justify-center items-center py-16 relative overflow-hidden`}
+      className={`bg-neutral-50 dark:text-neutral-100 text-neutral-600 dark:bg-dark flex flex-col w-full justify-center items-center py-16 relative overflow-hidden`}
     >
       {/* <img src={design} alt="vector" className="absolute  -right-40 w-96 h-96 object-contain" />     */}
       <div className="py-10 pt-20 sm:mt-10 sm:my-0 flex flex-col justify-center items-center w-full">
