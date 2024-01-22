@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from './Container'
 import  {contacts}  from '../utility';
+
 import { CiMail } from 'react-icons/ci';
 function Footer() {
   return (
@@ -17,7 +18,7 @@ function Footer() {
                                 {contacts.map((con) => {
                                      return <a key={con.id} href={con.link} className=' mr-5 sm:ml-0 flex mt-2 items-center'>
                                           <div>{con.icon}</div>
-                                         
+                                          {/* <p className='ml-2 text-sm md:text-lg'>{ con.name}</p> */}
                                      </a>
                                 })}
                            </div>
