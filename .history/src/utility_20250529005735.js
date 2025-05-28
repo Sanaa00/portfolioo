@@ -116,7 +116,7 @@ export const projects = [
   //   ],
   // },
   {
-    id: 2,
+    id: 5,
     name: 'Foodied',
     demo: '',
     code: 'https://github.com/Sanaa00/FOODIED.git',
@@ -145,7 +145,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 6,
     name: 'AdminPanel-candle',
     demo: 'https://candlestore-adminpanel.netlify.app/',
     code: 'https://github.com/Sanaa00/candle-AdminPanel',

@@ -98,25 +98,25 @@ export const projects = [
   //     },
   //   ],
   // },
-  // {
-  //   id: 4,
-  //   name: 'Hoo Bank',
-  //   demo: 'https://grand-pastelito-4e2d34.netlify.app/',
-  //   code: 'https://github.com/Sanaa00/web-business',
-  //   image: PROJECT4,
-  //   tools: [
-  //     {
-  //       id: 1,
-  //       name: 'React js',
-  //     },
-  //     {
-  //       id: 2,
-  //       name: 'Tailwind',
-  //     },
-  //   ],
-  // },
   {
-    id: 2,
+    id: 4,
+    name: 'Hoo Bank',
+    demo: 'https://grand-pastelito-4e2d34.netlify.app/',
+    code: 'https://github.com/Sanaa00/web-business',
+    image: PROJECT4,
+    tools: [
+      {
+        id: 1,
+        name: 'React js',
+      },
+      {
+        id: 2,
+        name: 'Tailwind',
+      },
+    ],
+  },
+  {
+    id: 5,
     name: 'Foodied',
     demo: '',
     code: 'https://github.com/Sanaa00/FOODIED.git',
@@ -145,7 +145,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 6,
     name: 'AdminPanel-candle',
     demo: 'https://candlestore-adminpanel.netlify.app/',
     code: 'https://github.com/Sanaa00/candle-AdminPanel',
